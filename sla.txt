@@ -1,0 +1,31 @@
+===============================================================
+SERVICE LEVEL AGREEMENT (SLA) - SURVEILLANCE OPENSTACK
+===============================================================
+
+ENTRE :
+   Le Fournisseur (Votre Nom / Admin OpenStack)
+ET :
+   Le Client (L'Utilisateur des VMs)
+
+1. OBJECTIF
+   Ce contrat garantit la surveillance quotidienne de la disponibilité
+   des instances de calcul (VMs) hébergées sur l'infrastructure OpenStack.
+
+2. GARANTIE DE DISPONIBILITÉ
+   Le Fournisseur s'engage à maintenir une disponibilité minimale de
+   99.5% sur une base quotidienne.
+
+3. MÉTHODE DE CALCUL
+   Disponibilité (%) = (Nombre d'instances ACTIVE / Nombre total d'instances) * 100
+
+4. FRÉQUENCE DE SURVEILLANCE
+   Le système effectuera une vérification automatique toutes les 5 minutes.
+
+5. RAPPORTS D'INCIDENTS
+   Les rapports de surveillance sont annexés ci-dessous :
+
+===============================================================
+HISTORIQUE DE SURVEILLANCE :
+===============================================================
+[2026-01-13 14:28:11] Total VMs: 2 | Disponibilité: 50.00% | Objectif: 99.5% -> VIOLATION
+[2026-01-13 15:12:00] Total VMs: 2 | Disponibilité: 50.00% | Objectif: 99.5% -> VIOLATION

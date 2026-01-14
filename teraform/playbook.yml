@@ -1,0 +1,27 @@
+---
+- name: Install Nginx and Deploy Web Page
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Update Apt Cache
+      apt:
+        update_cache: yes
+      ignore_errors: yes  # Ignore if no internet in safe-net
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+      ignore_errors: yes  # Will fail if VM has no internet
+
+    - name: Start Nginx Service
+      service:
+        name: nginx
+        state: started
+      ignore_errors: yes
+
+    - name: Deploy Custom Web Page
+      copy:
+        content: "<h1>Hello from Ansible and OpenStack!</h1>"
+        dest: /var/www/html/index.html
+      ignore_errors: yes
